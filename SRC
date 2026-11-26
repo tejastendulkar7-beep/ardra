@@ -1,0 +1,21 @@
+package com.example.demo;
+
+public class App {
+
+    public String greet(String name) {
+        if (name == null || name.isBlank()) {
+            return "Hello, Jenkins!";
+        }
+        return "Hello, " + name.trim() + "!";
+    }
+
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        App app = new App();
+        String target = args.length > 0 ? args[0] : "World";
+        System.out.println(app.greet(target));
+    }
+}
